@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <form id="passwordGenerator" class="form">
+          <div class="tickBoxes">  
+            <label for="characterAmountNumber">Number of Characters</label><br>
+              <input type="range" min="8" max="128" value="12" id="characterAmountRange">
+              <input type="number" min="8" max="128" value="12" id="characterAmountNumber">
+                    
+            <label for="includeUppercase">Include uppercase letters</label>
+            <input type="checkbox" id="includeUppercase">
+
+            <label for="includeLowercase">Include lowercase letters</label>
+            <input type="checkbox" id="includeLowercase">
+
+            <label for="includeNumbers">Include numbers</label>
+            <input type="checkbox" id="includeNumbers">
+
+            <label for="includeSpecialCharacters">Include special characters</label>
+            <input type="checkbox" id="includeSpecialCharacters">
+          </div>
+      
+          <div class="card-body">
+            <!-- <textarea
+              readonly
+              id="passwordDisplay"
+              placeholder="Your Secure Password"
+              aria-label="Generated Password"
+            ></textarea> -->
+            <h3 id="passwordDisplay">password</h3>
+          </div>
+          <div class="card-footer">
+            <button type="submit" class="btn" >Generate Password</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
